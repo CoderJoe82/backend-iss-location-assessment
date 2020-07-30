@@ -41,11 +41,13 @@ def main():
     lat_indy = 39.7684
     lon_indy = 86.1581
     location_indy = turtle.Turtle()
+    
     location_indy.penup()
     location_indy.color('yellow')
     location_indy.goto(lon_indy,lat_indy)
     location_indy.dot(5)
-    location_indy.hideturtle() 
+    location_indy.hideturtle()
+    turtle.done()
     url_indy = 'http://api.open-notify.org/iss-pass.json?lat=39.7684&lon=86.1581&#8217'
     response_indy = urllib.request.urlopen(url_indy)
     result_indy = json.loads(response_indy.read())
