@@ -38,8 +38,8 @@ def main():
     iss.penup()
     iss.goto(space_station_longitude, space_station_latitude)
 
-    lat_indy = 39.7684
-    lon_indy = 86.1581
+    lat_indy = 39.791000
+    lon_indy = -86.148003
     location_indy = turtle.Turtle()
     
     location_indy.penup()
@@ -48,7 +48,7 @@ def main():
     location_indy.dot(5)
     location_indy.hideturtle()
     turtle.done()
-    url_indy = 'http://api.open-notify.org/iss-pass.json?lat=39.7684&lon=86.1581&#8217'
+    url_indy = 'http://api.open-notify.org/iss-pass.json?lat=39.791000&lon=-86.148003&#8217'
     response_indy = urllib.request.urlopen(url_indy)
     result_indy = json.loads(response_indy.read())
     over_indy = result_indy['response'][1]['risetime']
